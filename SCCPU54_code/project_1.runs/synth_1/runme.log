@@ -1,0 +1,2305 @@
+
+*** Running vivado
+    with args -log sccomp_dataflow.vds -m64 -mode batch -messageDb vivado.pb -notrace -source sccomp_dataflow.tcl
+
+
+****** Vivado v2016.2 (64-bit)
+  **** SW Build 1577090 on Thu Jun  2 16:32:40 MDT 2016
+  **** IP Build 1577682 on Fri Jun  3 12:00:54 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source sccomp_dataflow.tcl -notrace
+Command: synth_design -top sccomp_dataflow -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9772 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 305.465 ; gain = 98.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'sccomp_dataflow' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/sccomp_dataflow.v:4]
+INFO: [Synth 8-638] synthesizing module 'cpu' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+INFO: [Synth 8-638] synthesizing module 'Decoder' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/decoder.v:4]
+	Parameter opr_Rtype bound to: 6'b000000 
+	Parameter func_add bound to: 6'b100000 
+	Parameter func_addu bound to: 6'b100001 
+	Parameter func_sub bound to: 6'b100010 
+	Parameter func_subu bound to: 6'b100011 
+	Parameter func_and bound to: 6'b100100 
+	Parameter func_or bound to: 6'b100101 
+	Parameter func_xor bound to: 6'b100110 
+	Parameter func_nor bound to: 6'b100111 
+	Parameter func_slt bound to: 6'b101010 
+	Parameter func_sltu bound to: 6'b101011 
+	Parameter func_sll bound to: 6'b000000 
+	Parameter func_srl bound to: 6'b000010 
+	Parameter func_sra bound to: 6'b000011 
+	Parameter func_sllv bound to: 6'b000100 
+	Parameter func_srlv bound to: 6'b000110 
+	Parameter func_srav bound to: 6'b000111 
+	Parameter func_jr bound to: 6'b001000 
+	Parameter opr_addi bound to: 6'b001000 
+	Parameter opr_addiu bound to: 6'b001001 
+	Parameter opr_andi bound to: 6'b001100 
+	Parameter opr_ori bound to: 6'b001101 
+	Parameter opr_xori bound to: 6'b001110 
+	Parameter opr_lw bound to: 6'b100011 
+	Parameter opr_sw bound to: 6'b101011 
+	Parameter opr_beq bound to: 6'b000100 
+	Parameter opr_bne bound to: 6'b000101 
+	Parameter opr_slti bound to: 6'b001010 
+	Parameter opr_sltiu bound to: 6'b001011 
+	Parameter opr_lui bound to: 6'b001111 
+	Parameter opr_j bound to: 6'b000010 
+	Parameter opr_jal bound to: 6'b000011 
+	Parameter func_div bound to: 6'b011010 
+	Parameter func_divu bound to: 6'b011011 
+	Parameter func_mult bound to: 6'b011000 
+	Parameter func_multu bound to: 6'b011001 
+	Parameter opr_bgez bound to: 6'b000001 
+	Parameter func_jalr bound to: 6'b001001 
+	Parameter opr_lbu bound to: 6'b100100 
+	Parameter opr_lhu bound to: 6'b100101 
+	Parameter opr_lb bound to: 6'b100000 
+	Parameter opr_lh bound to: 6'b100001 
+	Parameter opr_sb bound to: 6'b101000 
+	Parameter opr_sh bound to: 6'b101001 
+	Parameter func_break bound to: 6'b001101 
+	Parameter func_syscall bound to: 6'b001100 
+	Parameter func_mfhi bound to: 6'b010000 
+	Parameter func_mflo bound to: 6'b010010 
+	Parameter func_mthi bound to: 6'b010001 
+	Parameter func_mtlo bound to: 6'b010011 
+	Parameter opr_cp0 bound to: 6'b010000 
+	Parameter func_eret bound to: 6'b011000 
+	Parameter rs2521_mfc0 bound to: 5'b00000 
+	Parameter rs2521_mtc0 bound to: 5'b00100 
+	Parameter opr_clz bound to: 6'b011100 
+	Parameter func_teq bound to: 6'b110100 
+INFO: [Synth 8-256] done synthesizing module 'Decoder' (1#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/decoder.v:4]
+INFO: [Synth 8-638] synthesizing module 'controller' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:5]
+INFO: [Synth 8-256] done synthesizing module 'controller' (2#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:5]
+INFO: [Synth 8-638] synthesizing module 'ALU' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/ALU.v:4]
+	Parameter Addu bound to: 4'b0000 
+	Parameter Subu bound to: 4'b0001 
+	Parameter Add bound to: 4'b0010 
+	Parameter Sub bound to: 4'b0011 
+	Parameter And bound to: 4'b0100 
+	Parameter Or bound to: 4'b0101 
+	Parameter Xor bound to: 4'b0110 
+	Parameter Nor bound to: 4'b0111 
+	Parameter Lui_0 bound to: 4'b1000 
+	Parameter Lui_1 bound to: 4'b1001 
+	Parameter Sltu bound to: 4'b1010 
+	Parameter Slt bound to: 4'b1011 
+	Parameter Sra bound to: 4'b1100 
+	Parameter Srl bound to: 4'b1101 
+	Parameter Sla bound to: 4'b1110 
+	Parameter Sll bound to: 4'b1111 
+INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/ALU.v:4]
+INFO: [Synth 8-638] synthesizing module 'mult' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/multiplier.v:3]
+INFO: [Synth 8-256] done synthesizing module 'mult' (4#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/multiplier.v:3]
+INFO: [Synth 8-638] synthesizing module 'div' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/divider.v:4]
+INFO: [Synth 8-256] done synthesizing module 'div' (5#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/divider.v:4]
+INFO: [Synth 8-638] synthesizing module 'Regfile' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/RegFile.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Regfile' (6#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/RegFile.v:4]
+INFO: [Synth 8-638] synthesizing module 'Hi' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/HiLo.v:4]
+INFO: [Synth 8-256] done synthesizing module 'Hi' (7#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/HiLo.v:4]
+INFO: [Synth 8-638] synthesizing module 'Lo' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/HiLo.v:30]
+INFO: [Synth 8-256] done synthesizing module 'Lo' (8#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/HiLo.v:30]
+INFO: [Synth 8-638] synthesizing module 'PC' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/PC.v:4]
+	Parameter pc_start bound to: 4194304 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PC' (9#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/PC.v:4]
+INFO: [Synth 8-638] synthesizing module 'cp0' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cp0.v:4]
+	Parameter reg_status bound to: 12 - type: integer 
+	Parameter reg_cause bound to: 13 - type: integer 
+	Parameter reg_epc bound to: 14 - type: integer 
+WARNING: [Synth 8-3848] Net timer_int in module/entity cp0 does not have driver. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cp0.v:18]
+INFO: [Synth 8-256] done synthesizing module 'cp0' (10#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cp0.v:4]
+WARNING: [Synth 8-350] instance 'cp0_inst' of module 'cp0' requires 15 connections, but only 12 given [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:458]
+INFO: [Synth 8-638] synthesizing module 'CAL' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/CAL.v:4]
+INFO: [Synth 8-256] done synthesizing module 'CAL' (11#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/CAL.v:4]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (12#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+INFO: [Synth 8-638] synthesizing module 'MEM' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:93]
+INFO: [Synth 8-638] synthesizing module 'DMEM' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:4]
+	Parameter opr_sb bound to: 6'b101000 
+	Parameter opr_sh bound to: 6'b101001 
+	Parameter opr_lb bound to: 6'b100000 
+	Parameter opr_lbu bound to: 6'b100100 
+	Parameter opr_lh bound to: 6'b100001 
+	Parameter opr_lhu bound to: 6'b100101 
+INFO: [Synth 8-256] done synthesizing module 'DMEM' (13#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:4]
+INFO: [Synth 8-638] synthesizing module 'IMEM' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:71]
+INFO: [Synth 8-638] synthesizing module 'dist_mem_gen_0' [D:/Desktop/SCCPU54/project_1/project_1.runs/synth_1/.Xil/Vivado-7632-LAPTOP-02A16INM/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'dist_mem_gen_0' (14#1) [D:/Desktop/SCCPU54/project_1/project_1.runs/synth_1/.Xil/Vivado-7632-LAPTOP-02A16INM/realtime/dist_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'imem_ip' of module 'dist_mem_gen_0' requires 5 connections, but only 2 given [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:77]
+INFO: [Synth 8-256] done synthesizing module 'IMEM' (15#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:71]
+INFO: [Synth 8-256] done synthesizing module 'MEM' (16#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:93]
+INFO: [Synth 8-256] done synthesizing module 'sccomp_dataflow' (17#1) [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/sccomp_dataflow.v:4]
+WARNING: [Synth 8-3331] design DMEM has unconnected port dmem_addr[10]
+WARNING: [Synth 8-3331] design DMEM has unconnected port dmem_addr[9]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[31]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[30]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[29]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[28]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[27]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[26]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[25]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[24]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[23]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[22]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[21]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[20]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[19]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[18]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[17]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[16]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[15]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[14]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[13]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[12]
+WARNING: [Synth 8-3331] design MEM has unconnected port dmem_addr[11]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[31]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[30]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[29]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[28]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[27]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[26]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[25]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[24]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[23]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[22]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[21]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[20]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[19]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[18]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[17]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[16]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[15]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[14]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[13]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[1]
+WARNING: [Synth 8-3331] design MEM has unconnected port imem_in_addr[0]
+WARNING: [Synth 8-3331] design cp0 has unconnected port timer_int
+WARNING: [Synth 8-3331] design cp0 has unconnected port mfc0
+WARNING: [Synth 8-3331] design cp0 has unconnected port intr
+WARNING: [Synth 8-3331] design controller has unconnected port is_addu
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 347.449 ; gain = 140.258
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 347.449 ; gain = 140.258
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'dist_mem_gen_0' instantiated as 'mem/Imem/imem_ip' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/MEM.v:77]
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Desktop/SCCPU54/project_1/project_1.runs/synth_1/.Xil/Vivado-7632-LAPTOP-02A16INM/dcp/dist_mem_gen_0_in_context.xdc] for cell 'mem/Imem/imem_ip'
+Finished Parsing XDC File [D:/Desktop/SCCPU54/project_1/project_1.runs/synth_1/.Xil/Vivado-7632-LAPTOP-02A16INM/dcp/dist_mem_gen_0_in_context.xdc] for cell 'mem/Imem/imem_ip'
+Parsing XDC File [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/constrs_1/new/post.xdc]
+Finished Parsing XDC File [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/constrs_1/new/post.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 660.664 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <multiplier> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/multiplier.v:26]
+INFO: [Synth 8-5545] ROM "signed_R" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "unsigned_R" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "signed_Q" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "unsigned_Q" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "array_reg_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "array_reg_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cp0_reg_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "cal_out_result" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "mux_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mux_out" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[6]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[7]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[8]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[9]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[10]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[11]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'muxc__reg[12]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+WARNING: [Synth 8-327] inferring latch for variable 'tmp_result_reg' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/ALU.v:62]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[1]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[0]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[2]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[3]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[8]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[7]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[4]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[6]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[10]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[9]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[12]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+WARNING: [Synth 8-327] inferring latch for variable 'mux_out_reg[11]' [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:104]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     33 Bit       Adders := 2     
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 9     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 68    
++---RAMs : 
+	              15K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 33    
+	   3 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 5     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 5     
+	  14 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 76    
+	   4 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module sccomp_dataflow 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+Module Decoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 4     
+Module controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 7     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 2     
+	   3 Input     33 Bit       Adders := 2     
++---XORs : 
+	   2 Input     33 Bit         XORs := 1     
++---Muxes : 
+	  14 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module mult 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     34 Bit        Muxes := 2     
+Module div 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 10    
+Module Regfile 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module Hi 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Lo 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module cp0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 30    
+	   3 Input      1 Bit        Muxes := 3     
+Module CAL 
+Detailed RTL Component Info : 
++---Muxes : 
+	  32 Input      6 Bit        Muxes := 1     
+Module cpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 15    
+	   3 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 6     
+Module DMEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---RAMs : 
+	              15K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+DSP Report: Generating DSP p_1_out, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator p_1_out is absorbed into DSP p_1_out.
+DSP Report: operator p_0_out is absorbed into DSP p_1_out.
+INFO: [Synth 8-5545] ROM "unsigned_R" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "signed_R" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "unsigned_Q" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "signed_Q" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design cp0 has unconnected port timer_int
+WARNING: [Synth 8-3331] design cp0 has unconnected port mfc0
+WARNING: [Synth 8-3331] design cp0 has unconnected port intr
+WARNING: [Synth 8-3331] design controller has unconnected port is_addu
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 660.664 ; gain = 453.473
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------+-------------------+-----------+----------------------+-------------------------------------------------------------------------------+
+|Module Name     | RTL Object        | Inference | Size (Depth x Width) | Primitives                                                                    | 
++----------------+-------------------+-----------+----------------------+-------------------------------------------------------------------------------+
+|sccomp_dataflow | mem/Dmem/dmem_reg | Implied   | 512 x 32             | RAM16X1S x 64  RAM32X1S x 32  RAM64X1S x 32  RAM128X1S x 32  RAM256X1S x 32   | 
++----------------+-------------------+-----------+----------------------+-------------------------------------------------------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mult        | A*B            | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult        | (PCIN>>17)+A*B | 17     | 17     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult        | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mult        | (PCIN>>17)+A*B | 18     | 17     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_299' (LD) to 'sccpu/mux_out_reg[9]__0i_298'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_298' (LD) to 'sccpu/mux_out_reg[9]__0i_297'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_297' (LD) to 'sccpu/mux_out_reg[9]__0i_296'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_296' (LD) to 'sccpu/mux_out_reg[9]__0i_295'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_295' (LD) to 'sccpu/mux_out_reg[9]__0i_294'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_294' (LD) to 'sccpu/mux_out_reg[9]__0i_293'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_293' (LD) to 'sccpu/mux_out_reg[9]__0i_292'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_292' (LD) to 'sccpu/mux_out_reg[9]__0i_291'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_291' (LD) to 'sccpu/mux_out_reg[9]__0i_290'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_290' (LD) to 'sccpu/mux_out_reg[9]__0i_289'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_289' (LD) to 'sccpu/mux_out_reg[9]__0i_288'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_288' (LD) to 'sccpu/mux_out_reg[9]__0i_287'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_287' (LD) to 'sccpu/mux_out_reg[9]__0i_286'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_286' (LD) to 'sccpu/mux_out_reg[9]__0i_285'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_285' (LD) to 'sccpu/mux_out_reg[9]__0i_284'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_284' (LD) to 'sccpu/mux_out_reg[9]__0i_283'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_283' (LD) to 'sccpu/mux_out_reg[9]__0i_282'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_282' (LD) to 'sccpu/mux_out_reg[9]__0i_281'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_281' (LD) to 'sccpu/mux_out_reg[9]__0i_280'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_280' (LD) to 'sccpu/mux_out_reg[9]__0i_279'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_279' (LD) to 'sccpu/mux_out_reg[9]__0i_278'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_278' (LD) to 'sccpu/mux_out_reg[9]__0i_277'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_277' (LD) to 'sccpu/mux_out_reg[9]__0i_276'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_276' (LD) to 'sccpu/mux_out_reg[9]__0i_275'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_275' (LD) to 'sccpu/mux_out_reg[9]__0i_274'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_274' (LD) to 'sccpu/mux_out_reg[9]__0i_273'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_273' (LD) to 'sccpu/mux_out_reg[9]__0i_272'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_272' (LD) to 'sccpu/mux_out_reg[9]__0i_271'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_271' (LD) to 'sccpu/mux_out_reg[9]__0i_270'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_270' (LD) to 'sccpu/mux_out_reg[9]__0i_269'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[9]__0i_269' (LD) to 'sccpu/mux_out_reg[9]__0i_268'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_64' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_63' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_62' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_61' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_60' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_59' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_58' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_57' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_56' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_55' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_54' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_53' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_52' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_51' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_50' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_49' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_48' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_47' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_46' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_45' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_44' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_43' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_42' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_41' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_40' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_39' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_38' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_37' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_36' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_35' (FDE_1) to 'i_0/mem/Dmem/i_34'
+INFO: [Synth 8-3886] merging instance 'i_0/mem/Dmem/i_34' (FDE_1) to 'i_0/mem/Dmem/i_33'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sccpu/controller_inst/\muxc__reg[6][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sccpu/controller_inst/\muxc__reg[10][1] )
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][0]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][1]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][3]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][4]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][5]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][6]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][7]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][8]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][9]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][10]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][11]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][12]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][13]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][14]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][15]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][16]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][17]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][18]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][19]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][20]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][21]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][22]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][23]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][24]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][25]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][26]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][27]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][28]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][29]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[10][30]' (LDC) to 'sccpu/mux_out_reg[10][31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (sccpu/\mux_out_reg[10][31] )
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[2]__0i_130' (LD) to 'sccpu/mux_out_reg[2]__0i_129'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[3]__0i_197' (LD) to 'sccpu/mux_out_reg[3]__0i_196'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[2]__0i_129' (LD) to 'sccpu/mux_out_reg[2]__0i_128'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[3]__0i_196' (LD) to 'sccpu/mux_out_reg[3]__0i_195'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[2]__0i_128' (LD) to 'sccpu/mux_out_reg[2]__0i_127'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[3]__0i_195' (LD) to 'sccpu/mux_out_reg[3]__0i_194'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[2]__0i_127' (LD) to 'sccpu/mux_out_reg[2]__0i_126'
+INFO: [Synth 8-3886] merging instance 'sccpu/mux_out_reg[3]__0i_194' (LD) to 'sccpu/mux_out_reg[3]__0i_193'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (muxc__reg[6][1]) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (muxc__reg[10][1]) is unused and will be removed from module controller.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[32]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[31]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[30]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[29]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[28]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[27]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[26]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[25]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[24]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[23]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[22]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[21]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[20]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[19]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[18]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[17]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[16]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[15]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[14]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[13]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[12]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[11]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[10]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[9]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[8]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[7]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[6]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[5]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[4]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[3]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[2]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[1]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (tmp_result_reg[0]) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][31]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][30]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][29]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][28]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][27]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][26]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][25]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][24]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][23]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][22]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][21]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][20]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][19]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][18]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][17]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][16]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][15]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][14]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][13]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][12]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][11]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][10]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][9]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][8]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[1][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][31]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][30]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][29]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][28]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][27]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][26]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][25]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][24]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][23]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][22]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][21]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][20]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][19]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][18]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][17]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][16]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][15]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][14]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][13]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][12]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][11]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][10]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][9]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][8]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][7]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][6]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][5]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][4]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][3]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0][0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (mux_out_reg[0]__0i_32) is unused and will be removed from module cpu.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 660.664 ; gain = 453.473
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 660.664 ; gain = 453.473
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 699.340 ; gain = 492.148
+---------------------------------------------------------------------------------
+Inferred a: "set_disable_timing -from en -to z sccpu/i_159(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_159(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[0] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_64/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_64/I0 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_63/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_63/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[25]
+      : sccpu/alu_inst/B[25]
+    24: sccpu/i_159/z (tricell)
+    25: sccpu/i_159/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[0] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_64/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_64/I0 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_63/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_63/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[25]
+      : sccpu/alu_inst/B[25]
+    24: sccpu/i_159/z (tricell)
+    25: sccpu/i_159/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_158(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_158(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[0] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_64/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_64/I1 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_62/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_62/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[24]
+      : sccpu/alu_inst/B[24]
+    24: sccpu/i_158/z (tricell)
+    25: sccpu/i_158/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_161(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_161(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[1] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_57/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_57/I0 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_56/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_56/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[27]
+      : sccpu/alu_inst/B[27]
+    24: sccpu/i_161/z (tricell)
+    25: sccpu/i_161/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_160(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_160(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[1] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_57/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_57/I1 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_55/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_55/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[26]
+      : sccpu/alu_inst/B[26]
+    24: sccpu/i_160/z (tricell)
+    25: sccpu/i_160/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_162(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_162(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[2] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_50/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_50/I0 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_36/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_36/I1 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[28]
+      : sccpu/alu_inst/B[28]
+    24: sccpu/i_162/z (tricell)
+    25: sccpu/i_162/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_163(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_163(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[2] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_50/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_50/I1 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_49/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_49/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[29]
+      : sccpu/alu_inst/B[29]
+    24: sccpu/i_163/z (tricell)
+    25: sccpu/i_163/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_165(tricell)"
+Inferred a: "set_disable_timing -from en -to z sccpu/i_164(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_164(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/S[3] (CARRY4)
+    20: sccpu/alu_inst/i_0/i_44/O (GATE_2_1_NOR)
+    21: sccpu/alu_inst/i_0/i_44/I1 (GATE_2_1_NOR)
+    22: sccpu/alu_inst/i_0/i_43/O (GATE_2_6_XOR)
+    23: sccpu/alu_inst/i_0/i_43/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[30]
+      : sccpu/alu_inst/B[30]
+    24: sccpu/i_164/z (tricell)
+    25: sccpu/i_164/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_151(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_151(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[0] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_92/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_92/I0 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_91/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_91/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[17]
+      : sccpu/alu_inst/B[17]
+    26: sccpu/i_151/z (tricell)
+    27: sccpu/i_151/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_150(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_150(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[0] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_92/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_92/I1 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_90/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_90/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[16]
+      : sccpu/alu_inst/B[16]
+    26: sccpu/i_150/z (tricell)
+    27: sccpu/i_150/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_153(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_153(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[1] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_85/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_85/I0 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_84/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_84/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[19]
+      : sccpu/alu_inst/B[19]
+    26: sccpu/i_153/z (tricell)
+    27: sccpu/i_153/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_152(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_152(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[1] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_85/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_85/I1 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_83/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_83/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[18]
+      : sccpu/alu_inst/B[18]
+    26: sccpu/i_152/z (tricell)
+    27: sccpu/i_152/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_155(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_155(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[2] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_78/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_78/I0 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_77/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_77/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[21]
+      : sccpu/alu_inst/B[21]
+    26: sccpu/i_155/z (tricell)
+    27: sccpu/i_155/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_154(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_154(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[2] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_78/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_78/I1 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_76/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_76/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[20]
+      : sccpu/alu_inst/B[20]
+    26: sccpu/i_154/z (tricell)
+    27: sccpu/i_154/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_157(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_157(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[3] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_71/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_70/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_70/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[23]
+      : sccpu/alu_inst/B[23]
+    26: sccpu/i_157/z (tricell)
+    27: sccpu/i_157/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_156(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_156(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/S[3] (CARRY4)
+    22: sccpu/alu_inst/i_0/i_71/O (GATE_2_1_NOR)
+    23: sccpu/alu_inst/i_0/i_71/I1 (GATE_2_1_NOR)
+    24: sccpu/alu_inst/i_0/i_69/O (GATE_2_6_XOR)
+    25: sccpu/alu_inst/i_0/i_69/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[22]
+      : sccpu/alu_inst/B[22]
+    26: sccpu/i_156/z (tricell)
+    27: sccpu/i_156/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_143(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_143(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[0] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_120/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_120/I0 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_119/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_119/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[9]
+      : sccpu/alu_inst/B[9]
+    28: sccpu/i_143/z (tricell)
+    29: sccpu/i_143/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_142(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_142(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[0] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_120/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_120/I1 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_118/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_118/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[8]
+      : sccpu/alu_inst/B[8]
+    28: sccpu/i_142/z (tricell)
+    29: sccpu/i_142/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_145(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_145(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[1] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_113/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_113/I0 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_112/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_112/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[11]
+      : sccpu/alu_inst/B[11]
+    28: sccpu/i_145/z (tricell)
+    29: sccpu/i_145/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_144(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_144(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[1] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_113/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_113/I1 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_111/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_111/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[10]
+      : sccpu/alu_inst/B[10]
+    28: sccpu/i_144/z (tricell)
+    29: sccpu/i_144/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_147(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_147(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[2] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_106/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_106/I0 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_105/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_105/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[13]
+      : sccpu/alu_inst/B[13]
+    28: sccpu/i_147/z (tricell)
+    29: sccpu/i_147/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_146(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_146(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[2] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_106/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_106/I1 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_104/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_104/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[12]
+      : sccpu/alu_inst/B[12]
+    28: sccpu/i_146/z (tricell)
+    29: sccpu/i_146/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_149(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_149(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[3] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_99/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_99/I0 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_98/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_98/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[15]
+      : sccpu/alu_inst/B[15]
+    28: sccpu/i_149/z (tricell)
+    29: sccpu/i_149/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_148(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_148(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/S[3] (CARRY4)
+    24: sccpu/alu_inst/i_0/i_99/O (GATE_2_1_NOR)
+    25: sccpu/alu_inst/i_0/i_99/I1 (GATE_2_1_NOR)
+    26: sccpu/alu_inst/i_0/i_97/O (GATE_2_6_XOR)
+    27: sccpu/alu_inst/i_0/i_97/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[14]
+      : sccpu/alu_inst/B[14]
+    28: sccpu/i_148/z (tricell)
+    29: sccpu/i_148/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_135(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_135(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[0] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_148/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_148/I0 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_147/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_147/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[1]
+      : sccpu/alu_inst/B[1]
+    30: sccpu/i_135/z (tricell)
+    31: sccpu/i_135/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_134(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_134(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[0] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_148/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_148/I1 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_146/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_146/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[0]
+      : sccpu/alu_inst/B[0]
+    30: sccpu/i_134/z (tricell)
+    31: sccpu/i_134/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_137(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_137(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[1] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_141/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_141/I0 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_140/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_140/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[3]
+      : sccpu/alu_inst/B[3]
+    30: sccpu/i_137/z (tricell)
+    31: sccpu/i_137/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_136(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_136(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[1] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_141/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_141/I1 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_139/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_139/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[2]
+      : sccpu/alu_inst/B[2]
+    30: sccpu/i_136/z (tricell)
+    31: sccpu/i_136/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_139(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_139(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[2] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_134/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_134/I0 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_133/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_133/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[5]
+      : sccpu/alu_inst/B[5]
+    30: sccpu/i_139/z (tricell)
+    31: sccpu/i_139/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_138(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_138(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[2] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_134/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_134/I1 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_132/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_132/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[4]
+      : sccpu/alu_inst/B[4]
+    30: sccpu/i_138/z (tricell)
+    31: sccpu/i_138/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_141(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_141(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[3] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_127/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_127/I0 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_126/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_126/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[7]
+      : sccpu/alu_inst/B[7]
+    30: sccpu/i_141/z (tricell)
+    31: sccpu/i_141/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Inferred a: "set_disable_timing -from en -to z sccpu/i_140(tricell)"
+Inferred a: "set_disable_timing -from a -to z sccpu/i_140(tricell)"
+Found timing loop:
+     0: sccpu/controller_inst/i_0/i_75/O (GATE_2_14_OR)
+     1: sccpu/controller_inst/i_0/i_75/I0 (GATE_2_14_OR)
+     2: sccpu/controller_inst/i_0/i_74/O (GATE_2_8_AND)
+     3: sccpu/controller_inst/i_0/i_74/I1 (GATE_2_8_AND)
+     4: sccpu/controller_inst/i_0/i_71/O (GATE_2_1_NOR)
+     5: sccpu/controller_inst/i_0/i_71/I0 (GATE_2_1_NOR)
+     6: sccpu/controller_inst/i_0/i_59/O (GATE_2_13)
+     7: sccpu/controller_inst/i_0/i_59/I0 (GATE_2_13)
+     8: sccpu/controller_inst/i_0/i_30/O (GATE_2_11)
+     9: sccpu/controller_inst/i_0/i_30/I0 (GATE_2_11)
+      : sccpu/controller_inst/i_0/p_0_in[0]
+      : sccpu/controller_inst/N
+      : sccpu/alu_inst/N
+      : sccpu/alu_inst/i_0/N
+    10: sccpu/alu_inst/i_0/i_1841/O (GATE_2_14_OR)
+    11: sccpu/alu_inst/i_0/i_1841/I0 (GATE_2_14_OR)
+    12: sccpu/alu_inst/i_0/i_1840/O (GATE_2_2)
+    13: sccpu/alu_inst/i_0/i_1840/I0 (GATE_2_2)
+    14: sccpu/alu_inst/i_0/i_1748/O (GATE_2_8_AND)
+    15: sccpu/alu_inst/i_0/i_1748/I1 (GATE_2_8_AND)
+    16: sccpu/alu_inst/i_0/i_1747/Z (MUX1)
+    17: sccpu/alu_inst/i_0/i_1747/A (MUX1)
+    18: sccpu/alu_inst/i_0/i_1851/CO[3] (CARRY4)
+    19: sccpu/alu_inst/i_0/i_1851/CI (CARRY4)
+    20: sccpu/alu_inst/i_0/i_1850/CO[3] (CARRY4)
+    21: sccpu/alu_inst/i_0/i_1850/CI (CARRY4)
+    22: sccpu/alu_inst/i_0/i_1849/CO[3] (CARRY4)
+    23: sccpu/alu_inst/i_0/i_1849/CI (CARRY4)
+    24: sccpu/alu_inst/i_0/i_1848/CO[3] (CARRY4)
+    25: sccpu/alu_inst/i_0/i_1848/S[3] (CARRY4)
+    26: sccpu/alu_inst/i_0/i_127/O (GATE_2_1_NOR)
+    27: sccpu/alu_inst/i_0/i_127/I1 (GATE_2_1_NOR)
+    28: sccpu/alu_inst/i_0/i_125/O (GATE_2_6_XOR)
+    29: sccpu/alu_inst/i_0/i_125/I0 (GATE_2_6_XOR)
+      : sccpu/alu_inst/i_0/B[6]
+      : sccpu/alu_inst/B[6]
+    30: sccpu/i_140/z (tricell)
+    31: sccpu/i_140/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/controller.v:113]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+Found timing loop:
+     0: sccpu/i_165/z (tricell)
+     1: sccpu/i_165/z (tricell)
+WARNING: [Synth 8-295] found timing loop. [D:/Desktop/SCCPU54/sccpu54/sccpu54.srcs/sources_1/new/cpu.v:4]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through sccpu/controller_inst/i_0/i_71/O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 784.414 ; gain = 577.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8216' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8215' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8214' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8213' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8212' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8211' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8210' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8209' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8196' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8197' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8199' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8200' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8203' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8187' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8208' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8192' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8186' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8188' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8189' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8205' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8190' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8191' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8207' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8198' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8194' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8193' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8201' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8185' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8202' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8204' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8195' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8206' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8216' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8215' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8214' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8213' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8212' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8211' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8210' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8209' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8196' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8197' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8199' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8200' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8203' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8187' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8208' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8192' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8186' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8188' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8189' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8205' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8190' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8191' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8207' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8198' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8194' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8193' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8201' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8185' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8202' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8204' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8195' with timing assertions on output pin 'z'
+INFO: [Synth 8-620] skipping equivalence-propagation across instance 'sccpui_8206' with timing assertions on output pin 'z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through i_196/O'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 861.156 ; gain = 653.965
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[31]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[30]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[29]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[28]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[27]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[26]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[25]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[24]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[23]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[22]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[21]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[20]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[19]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[18]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[17]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[16]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[15]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[14]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[13]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[12]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin d[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin clk
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \mem/Imem/imem_ip  has unconnected pin we
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |dist_mem_gen_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |dist_mem_gen_0 |     1|
+|2     |BUFG           |     4|
+|3     |CARRY4         |  1264|
+|4     |DSP48E1        |     4|
+|5     |LUT1           |   470|
+|6     |LUT2           |   690|
+|7     |LUT3           |  4075|
+|8     |LUT4           |   283|
+|9     |LUT5           |   417|
+|10    |LUT6           |  1704|
+|11    |MUXF7          |   385|
+|12    |RAM128X1S      |    32|
+|13    |RAM16X1S       |    64|
+|14    |RAM256X1S      |    32|
+|15    |RAM32X1S       |    32|
+|16    |RAM64X1S       |    32|
+|17    |FDCE           |  1072|
+|18    |FDPE           |    16|
+|19    |FDRE           |  1088|
+|20    |FDSE           |     1|
+|21    |LD             |   133|
+|22    |LDC            |     3|
+|23    |LDCP           |     4|
+|24    |LDP            |     2|
+|25    |IBUF           |     2|
+|26    |OBUF           |    64|
++------+---------------+------+
+
+Report Instance Areas: 
++------+--------------------+-----------+------+
+|      |Instance            |Module     |Cells |
++------+--------------------+-----------+------+
+|1     |top                 |           | 11905|
+|2     |  mem               |MEM        |  1397|
+|3     |    Dmem            |DMEM       |   293|
+|4     |    Imem            |IMEM       |  1104|
+|5     |  sccpu             |cpu        | 10435|
+|6     |    controller_inst |controller |   149|
+|7     |    cp0_inst        |cp0        |  1473|
+|8     |    cpu_ref         |Regfile    |  2824|
+|9     |    div_inst        |div        |  5421|
+|10    |    hi_inst         |Hi         |    32|
+|11    |    lo_inst         |Lo         |    32|
+|12    |    mult_inst       |mult       |    64|
+|13    |    pc_inst         |PC         |   197|
++------+--------------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 861.156 ; gain = 653.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 34 critical warnings and 512 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 861.156 ; gain = 312.531
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 861.156 ; gain = 653.965
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1604 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 227 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 334 instances were transformed.
+  LD => LDCE: 133 instances
+  LDC => LDCE: 3 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 4 instances
+  LDP => LDPE (inverted pins: G): 2 instances
+  RAM128X1S => RAM128X1S (inverted pins: WCLK) (MUXF7, RAMS64E, RAMS64E): 32 instances
+  RAM16X1S => RAM32X1S (inverted pins: WCLK) (RAMS32): 64 instances
+  RAM256X1S => RAM256X1S (inverted pins: WCLK) (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 32 instances
+  RAM32X1S => RAM32X1S (inverted pins: WCLK) (RAMS32): 32 instances
+  RAM64X1S => RAM64X1S (inverted pins: WCLK) (RAMS64E): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+290 Infos, 216 Warnings, 34 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 861.156 ; gain = 630.145
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 861.156 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 19 12:01:10 2024...
