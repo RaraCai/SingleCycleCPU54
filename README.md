@@ -1,35 +1,5 @@
 # 单周期54条指令CPU实验
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>README</title>
-<style>
-  .tip-box {
-    background-color: #d4edda; /* 浅绿色背景 */
-    border-left: 4px solid #c3e6cb; /* 绿色边框 */
-    margin: 20px 0;
-    padding: 10px 20px;
-    color: #155724; /* 文本颜色 */
-    font-size: 14px; /* 字体大小 */
-  }
-
-  .tip-box::before {
-    content: "💡"; /* 灯泡图标 */
-    margin-right: 8px; /* 图标与文本之间的间距 */
-    color: #28a745; /* 图标颜色 */
-  }
-</style>
-</head>
-<body>
-
-<div class="tip-box">
-  💡 Tips: 提供参考，欢迎交流，切勿抄袭！
-</div>
-
-</body>
-</html>
+- [**Tips**](#){: .green-background } 💡仅供参考，欢迎交流，请勿抄袭！
 ## 简介
 本项目为同济大学2024年计算机组成原理课程设计的CPU54部分，由单周期实现。
 ## 各部分文件说明
